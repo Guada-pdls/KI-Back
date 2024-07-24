@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
 
 export default {
-    HOST: process.env.HOST || "",
     PORT: process.env.PORT || 8080,
     MONGO_LINK: process.env.MONGO_LINK || "",
     PERSISTENCE: process.env.PERSISTENCE || "MONGO",

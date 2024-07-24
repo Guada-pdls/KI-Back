@@ -1,0 +1,16 @@
+error: Debe enviar nombre, correo y mensaje
+error: Debe enviar nombre, correo y mensaje
+error: Failed to parse URL from /questions.JSON
+error: Failed to parse URL from questions.JSON
+error: Failed to parse URL from ./questions.JSON
+error: Failed to parse URL from ../questions.JSON
+error: Failed to parse URL from ../questions.JSON
+error: __dirname is not defined
+error: fetch failed
+error: data is not defined
+error: data is not defined
+error: path is not defined
+error: ENOENT: no such file or directory, open 'C:\Users\guada\Desktop\Proyectos\KI Enrolment - Back\src\questions.JSON'
+error: ENOENT: no such file or directory, open 'C:\Users\guada\Desktop\Proyectos\KI Enrolment - Back\src\questions.JSON'
+error: ENOENT: no such file or directory, open 'C:\Users\guada\Desktop\Proyectos\KI Enrolment - Back\src\questions.JSON'
+error: ENOENT: no such file or directory, open 'C:\Users\guada\Desktop\Proyectos\KI Enrolment - Back\controller\questions.JSON'

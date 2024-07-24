@@ -6,3 +6,5 @@ Content-Type: application/json
     "mail": "test@gmail.com",
     "msg": "test"
 }
+###
+GET http://localhost:8000/api/questions
