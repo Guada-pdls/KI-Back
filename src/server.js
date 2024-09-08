@@ -10,6 +10,8 @@ import notFoundHandler from "./middlewares/notFoundHandler.js";
 
 const server = express();
 
+console.log(config)
+
 server.use(
     cors({
         origin: config.FRONT_DOMAIN,
