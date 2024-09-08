@@ -9,12 +9,11 @@ import errorHandler from "./middlewares/errorHandler.js";
 import notFoundHandler from "./middlewares/notFoundHandler.js";
 
 const server = express();
-// config.connectDB();
+
 server.use(
     cors({
         origin: config.FRONT_DOMAIN,
         methods: 'GET,POST,PUT,DELETE,OPTIONS',
-        credentials: true,
         allowedHeaders: 'Content-Type'
     })
 );
@@ -27,12 +26,7 @@ server.use('/', router)
 server.use(errorHandler)
 server.use(notFoundHandler)
 
-export default server
-
-
-
-
-
+server.options('*', cors());
 
 const httpServer = http.createServer(server);
 
