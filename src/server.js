@@ -18,11 +18,11 @@ server.use(
     })
 );
 
-server.options('*', cors());
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
 
 server.use('/', router)
+server.options('*', cors());
 
 server.use(errorHandler)
 server.use(notFoundHandler)
