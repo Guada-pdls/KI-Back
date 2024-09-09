@@ -10,11 +10,9 @@ import notFoundHandler from "./middlewares/notFoundHandler.js";
 
 const server = express();
 
-logger.info(config.FRONT_DOMAIN)
-
 server.use(
     cors({
-        origin: config.FRONT_DOMAIN,
+        origin: 'https://kingdom-institute-v2.vercel.app',
         methods: 'GET,POST,PUT,DELETE,OPTIONS',
         allowedHeaders: 'Content-Type'
     })
@@ -28,7 +26,7 @@ server.use('/', router)
 server.use(errorHandler)
 server.use(notFoundHandler)
 
-server.options('*', cors());
+// server.options('*', cors());
 
 const httpServer = http.createServer(server);
 
