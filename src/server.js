@@ -10,10 +10,9 @@ import notFoundHandler from "./middlewares/notFoundHandler.js";
 
 const server = express();
 
-// Middleware de CORS, configurado correctamente
 server.use(
     cors({
-        origin: ['https://kingdom-institute-v2.vercel.app'], 
+        origin: '*', 
         methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
         allowedHeaders: ['Content-Type'],
     })
@@ -21,18 +20,14 @@ server.use(
 
 server.get('/favicon.ico', (req, res) => res.status(204));
 
-// Middleware para parsear body de las solicitudes
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
 
-// Rutas
 server.use('/', router);
 
-// Middlewares de manejo de errores
 server.use(errorHandler);
 server.use(notFoundHandler);
 
-// Servidor HTTP
 const httpServer = http.createServer(server);
 
 httpServer.listen(config.PORT, () => {
