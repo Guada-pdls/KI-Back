@@ -9,6 +9,7 @@ import errorHandler from "./middlewares/errorHandler.js";
 import notFoundHandler from "./middlewares/notFoundHandler.js";
 
 const server = express();
+logger.info(config.TEST)
 
 server.use(
     cors({

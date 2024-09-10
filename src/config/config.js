@@ -7,5 +7,5 @@ export default {
     FRONT_DOMAIN: process.env.FRONT_DOMAIN || "",
     GMAIL_USER_APP: process.env.GMAIL_USER_APP || "",
     GMAIL_PASS_APP: process.env.GMAIL_PASS_APP || "",
-    // connectDB: async () => MongoSingleton.getInstance(),
+    TEST: process.env.TEST || "error"
 };
