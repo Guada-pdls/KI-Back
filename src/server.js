@@ -12,11 +12,13 @@ const server = express();
 
 server.use(
     cors({
-        origin: 'https://kingdom-institute-v2.vercel.app',
+        origin: '*',
         methods: 'GET,POST,PUT,DELETE,OPTIONS',
         allowedHeaders: 'Content-Type'
     })
 );
+
+server.get('/favicon.ico', (req, res) => res.status(204));
 
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
